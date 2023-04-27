@@ -71,5 +71,5 @@ Provide a working implementation of a `TicketService` that:
 
 ## How to Test Solution
 
-- Clone this repo locally
+- Download / Clone this repo locally: `git clone https://github.com/Dannytebj/cinema-tickets-javascript-7881997.git`
 - in the root directory, run `npm run test`

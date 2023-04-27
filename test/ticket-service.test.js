@@ -45,13 +45,13 @@ describe("TicketService", () => {
       validAccountId = 1;
     });
 
-    afterEach(() => {
-      ticketService = null;
-      validAccountId = null;
-      ticketRequest = null;
-      ticketRequest2 = null;
-      ticketRequest3 = null;
-    });
+    // afterEach(() => {
+    //   ticketService = null;
+    //   validAccountId = null;
+    //   ticketRequest = null;
+    //   ticketRequest2 = null;
+    //   ticketRequest3 = null;
+    // });
 
     it("should throw an error if accountId is not a positive integer", () => {
       assert.throws(

@@ -20,6 +20,7 @@ export default class TicketService {
    */
 
   purchaseTickets(accountId, ...ticketTypeRequests) {
+    // validate accountId
     if (!Number.isInteger(accountId) || accountId < 0) {
       throw new InvalidPurchaseException(
         "accountId must be an integer greater than 0"
@@ -28,6 +29,7 @@ export default class TicketService {
 
     const ticketTypeRequestsArray = [...ticketTypeRequests];
 
+    // validate ticketTypeRequests
     if (ticketTypeRequestsArray.length === 0) {
       throw new InvalidPurchaseException(
         "Number of tickets purchased must be greater than 0"
@@ -95,7 +97,8 @@ export default class TicketService {
    */
   #getTotalNumberOfTicketRequests(numberOfTicketsByType) {
     return Object.values(numberOfTicketsByType).reduce(
-      (total, current) => total + current
+      (total, current) => total + current,
+      0
     );
   }
 
